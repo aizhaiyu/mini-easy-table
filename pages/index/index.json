@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "easy-table": "/components/easy-table/easy-table"
+  }
+}

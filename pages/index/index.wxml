@@ -1,0 +1,26 @@
+<view class="main">
+    <!-- table -->
+    <view class="table">
+        <view  class="money">年度累计结算金额：￥{{111}}</view>
+        <!-- 去除y不指定高度 -->
+        <easy-table
+            border="{{border}}"
+            opText="{{opText}}"
+            align="{{align}}" 
+            config="{{list}}"
+            bind:OpClick="OpClick"
+            left="{{left}}"
+            y="350"
+            stripe="{{stripe}}"
+        />
+    </view>
+
+    <!-- 按钮 -->
+    <view class="btn">
+        <view bindtap="alignClick">表格对齐方式</view>
+        <view bindtap="opTextClick">开启/关闭操作按钮</view>
+        <view bindtap="stripeClick">开启/关闭斑马线</view>
+        <view bindtap="borderClick">开启/关闭边框</view>
+        <view bindtap="leftClick">开启/关闭左边栏固定</view>
+    </view>
+</view>

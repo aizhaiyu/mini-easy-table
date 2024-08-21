@@ -1,0 +1,31 @@
+page {
+  background-color: #eee;
+  color: #3b3b3b;
+  font-size: 30rpx;
+}
+
+.table {
+  margin-top: 200rpx;
+  padding: 30rpx;
+  background-color: #fff;
+}
+
+.btn{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.btn>view{
+  width: 300rpx;
+  height: 80rpx;
+  background-color: cadetblue;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 10rpx;
+}

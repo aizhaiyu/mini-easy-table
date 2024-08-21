@@ -1,0 +1,56 @@
+<!-- 
+<easy-table 
+  border="{{false}}"//边框
+  stripe="{{false}}"//斑马纹
+  align="center"//对齐方式
+  left="{{true}}"//固定左边栏
+  y="250"//设置了高度会默认标题top悬浮
+  opText="查看详情" //有内容显示操作按钮
+  config="{{config}}"
+/>
+
+config: {
+  //必须
+  content: [
+    {
+      month: '2024-08',
+      money: '￥22',
+      money1: '￥22'
+    },
+    {
+      month: '2024-08',
+      money: '￥22',
+      money1: '￥22'
+    },
+  ],
+  titles: ["月份", "结算金额","结算金额"],
+  //必须
+  props: ['month', 'money','money1'],
+  columnWidths: ['270rpx', '270rpx','270rpx']
+}
+-->
+
+<view class="table {{border?'border':''}}">
+  <scroll-view class="table_scroll" scroll-y="{{y!='0'}}" scroll-x style="{{y != '0' ? 'max-height: ' + y + 'rpx;' : ''}}">
+    <view wx:if="{{config.titles}}" style="position:sticky;top:0;z-index:999;" class="header">
+      <view wx:for="{{config.titles}}" wx:key="{{index}}" style="{{index==0&&left?'position:sticky;left:0;':''}} text-align: {{align}};width:{{config.columnWidths[index]}};background-color:{{headbgColor}};font-size:{{size}}rpx;" class="header-column {{border?'header-column-border':''}}">
+        {{item}}
+      </view>
+      <!-- 添加最后一列操作标题 -->
+      <view wx:if="{{opText!=''}}" style="background-color:{{headbgColor}};min-width: 150rpx;min-height: 80rpx;" class="opText {{border?'header-column-border':''}}">
+      </view>
+    </view>
+
+    <view class="content">
+      <view wx:for="{{config.content}}" wx:for-index="outIndex" wx:for-item="outItem" wx:key="{{outIndex}}" class="content-row">
+        <view wx:for="{{config.props}}" wx:key="{{index}}" style="{{index==0&&left?'position:sticky;left:0;z-index:99;':''}} text-align: {{align}};width:{{config.columnWidths[index]}};font-size:{{size}}rpx;" class="content-column {{border?'content-column-border':''}} {{stripe?(outIndex%2 === 0 ? 'content-row-bg1':'content-row-bg2'):'content-row-bg1'}}">
+          {{outItem[item]}}
+        </view>
+        <!-- 添加最后一列操作文本 -->
+        <view wx:if="{{opText!=''}}" style="font-size:{{size}}rpx;text-align: {{align}};" data-row="{{outItem}}" bindtap="OpClick" class="content-row opText {{border?'content-column-border':''}} {{stripe?(outIndex%2 === 0 ? 'content-row-bg1':'content-row-bg2'):''}}">
+          {{opText}}
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
