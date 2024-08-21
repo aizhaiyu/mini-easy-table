@@ -4,9 +4,11 @@
 
 最近需要还原一个table效果，网上找了很多基本不适合，原生的小程序table又很少，本组件是对[etable](https://github.com/middleHallo/etable_demo)进行优化改良，感谢大佬提供的思路
 
-先上效果
+先上效果 在img
 
-<img src="/img/img.gif" alt="img" style="zoom:50%;" />
+<img src="/img/img.gif" alt="img" style="zoom:30%;" />
+
+<img src="E:\wolfman\programData\小程序\mini-easy-table\img\jt.png" style="zoom:73%;" />
 
 ## 使用介绍
 
