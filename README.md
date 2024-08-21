@@ -4,6 +4,8 @@
 
 最近需要还原一个table效果，网上找了很多基本不适合，原生的小程序table又很少，本组件是对[etable](https://github.com/middleHallo/etable_demo)进行优化改良，感谢大佬提供的思路
 
+#### 支持：固定表标题与左边一列，斑马纹，边框，点击事件，表格对齐方式
+
 先上效果 在img
 
 <img src="/img/img.gif" alt="img" style="zoom:30%;" />
