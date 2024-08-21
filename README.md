@@ -9,7 +9,7 @@
 <img src="/img/img.gif" alt="img" style="zoom:30%;" />
 
 
-<img src="E:\wolfman\programData\小程序\mini-easy-table\img\jt.png" style="zoom:73%;" />
+<img src="/img/jt.png" style="zoom:73%;" />
  
 ## 使用介绍
 
@@ -41,20 +41,20 @@
 
 ```json
 data:{
-config: {
-  //必须
-  content: [
-    {
-      month: '2024-08',
-      money: '￥22',
-      money1: '￥22'
-    },
-    {
-      month: '2024-08',
-      money: '￥22',
-      money1: '￥22'
-    }
-  ],
+  config: {
+    //必须
+      content: [
+      {
+        month: '2024-08',
+        money: '￥22',
+        money1: '￥22'
+      },
+      {
+        month: '2024-08',
+        money: '￥22',
+        money1: '￥22'
+      },
+    ],
   titles: ["月份", "结算金额","结算金额"],
   //必须
   props: ['month', 'money','money1'],
@@ -68,5 +68,3 @@ config: {
 - props 每一列对应的数据的key值
 
 - columnWidths  每一列的列宽，值类型使用rpx，注意：(titles,props,columnWidths这3个数组的长度需保持一致)
-
-  
