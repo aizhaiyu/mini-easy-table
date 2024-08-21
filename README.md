@@ -8,6 +8,7 @@
 
 <img src="/img/img.gif" alt="img" style="zoom:30%;" />
 
+
 <img src="E:\wolfman\programData\小程序\mini-easy-table\img\jt.png" style="zoom:73%;" />
  
 ## 使用介绍
